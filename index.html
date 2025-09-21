@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Progress Bar JS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="skillSelection">
+
+    <h2>Skill Leveling Up</h2>
+
+    <!-- Dropdown: Choose skill -->
+    <p>Choose your skill</p>
+    <select id="skillSelection">
+      <option value="" disabled selected>Skill selection</option>
+      <option value="one-handed">One Handed</option>
+      <option value="destruction">Destruction</option>
+      <option value="sneak">Sneak</option>
+      <option value="lockpicking">Lockpicking</option>
+      <option value="alchemy">Alchemy</option>
+    </select>
+
+    <!-- Input: Level number -->
+    <input type="number" id="skillLevel" placeholder="Enter level">
+
+    <!-- Button: Trigger level-up -->
+    <button type="button" id="levelUp">Level up</button>
+
+    <!-- Progress circle wrapper -->
+    <div class="skill" id="skill">
+      <div class="outer">
+        <div class="inner">
+          <!-- Animated number -->
+          <div class="number" id="number"></div>
+        </div>
+      </div>
+
+      <!-- SVG circular progress bar -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="160px" height="160px">
+        <defs>
+          <!-- Gradient stroke for the circle -->
+          <linearGradient id="GradientColor">
+            <stop offset="0%" stop-color="#5a3a3a" />
+            <stop offset="100%" stop-color="#3a5a5a" />
+          </linearGradient>
+        </defs>
+        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <!-- Alert message -->
+    <h3 id="alert"></h3>
+  </div>
+</body>
+</html>
+
